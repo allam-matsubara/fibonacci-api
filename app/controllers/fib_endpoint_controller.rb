@@ -1,0 +1,2 @@
+class FibEndpointController < ApplicationController
+end
