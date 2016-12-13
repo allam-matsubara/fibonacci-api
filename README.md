@@ -5,15 +5,15 @@ and generates the first ```n``` Fibonacci sequence numbers and returns them as a
 
 ## Usage
 
-This API was written with Ruby 2.3.3 and Rails 5.0.0.1. The `.ruby-version` and `.ruby-gemset` for RVM
-or rbenv usage are not included in the tree.
+This API was written with Ruby 2.3.3 and Rails 5.0.0.1. The `.ruby-version` and `.ruby-gemset` 
+files for RVM or rbenv usage are not included in the tree.
 
 1. Clone this repository.
 2. Go to the application folder that you just cloned.
 3. `bundle install`
 4. Launch the server of you preference. (Puma is used by default).
 
-With the API up and running, you will only acces it sending a post request to a single URL: 
+With the API up and running, you will only access it sending a post request to a single URL: 
 `<server_name>:<port>/fib_enpoint/receiver/<quantity>` where quantity is the amount of numbers
 wanted from the Fibonacci sequence. The values accepted are only natural numbers without 0, any 
 other values will generate an 400 HTTP code as response. If you're going to use it in another 
@@ -36,3 +36,8 @@ databases where needed, nor any kind of front-end tool, views, models, helpers a
 and lots of requirements also removed. So, in this scenario, a smaller framework, like SInatra, could have
 been used for this small API. Most of the logic is dealled with PORO(Plain old ruby object) except by the `.blank?`
 method that's provided by rails and it's used on `lib/classes/fib.rb`.
+
+## Problems
+
+1. Lack of tests. :(
+
