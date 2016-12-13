@@ -6,7 +6,9 @@ class FibEndpointController < ApplicationController
     head :bad_request and return if n <= 0 || !n.is_a?(Fixnum)
     
     fib = Fib.new n
-    binding.pry
+    fib.populate
+
+    render json: fib.result
   end
 
 end
